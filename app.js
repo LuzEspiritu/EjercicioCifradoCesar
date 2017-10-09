@@ -1,4 +1,3 @@
-console.log('lucesita')
 function cipherCesar(userMessage){
 convertToCapital =userMessage.toUpperCase();//LUCESITA
 splitString=convertToCapital.split("")//["L", "U", "C", "E", "S", "I", "T", "A"]
@@ -15,8 +14,6 @@ for(i=0; i<splitString.length; i++){
  }
 return splitString.join("");  //retornará la cadena de texto cofrado.
 }
-
-
 function decipherCesar(userMessageCipher){
 convertToCapitalTheMessageCipher =userMessageCipher.toUpperCase();//LUCESITA
 splitMessageCipher=convertToCapitalTheMessageCipher.split("")//["L", "U", "C", "E", "S", "I", "T", "A"]
@@ -33,3 +30,6 @@ for(i=0; i<splitMessageCipher.length; i++){
 }
 return splitMessageCipher.join("");  //retornará la cadena de texto cofrado.
 }
+var message= prompt("escribe un mensaje");
+if(message.length>0&&typeof message!="number")
+console.log(decipherCesar(message));
